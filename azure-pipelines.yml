@@ -1,6 +1,6 @@
 jobs:
 - job: BuildAndRelease
-  displayName: 'Build and Release Job'
+  displayName: 'Build and Release Task'
   pool:
     vmImage: 'ubuntu-latest'
   steps:
