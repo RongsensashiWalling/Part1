@@ -1,24 +1,18 @@
-trigger:
-- task: buildandreleasetask@1
-  inputs:
-    samplestring: 'Test'
-  branches:
-    exclude:
-      - '*'
-
-pr: none
-
 jobs:
-- job: AddTaskJob
-  displayName: 'Add a Task'
+- job: BuildAndRelease
+  displayName: 'Build and Release Job'
   pool:
     vmImage: 'ubuntu-latest'
   steps:
-  - script: echo 'Running the original steps...'
-    displayName: 'Original Step'
-  - task: UseNode@1
-    displayName: 'Add a Node.js task'
+  - script: echo 'Running the build step...'
+    displayName: 'Build Step'
+    # Add your build commands here
+
+  - task: buildandreleasetask@1
+    displayName: 'Custom Build and Release Task'
     inputs:
-      versionSpec: '16'
-  - script: echo 'Running the updated steps...'
-    displayName: 'Updated Step'
+      samplestring: 'Test'
+    # Add any additional inputs or configurations for the task here
+
+  - script: echo 'Running the release step...'
+    displayName: 'Release Step'
