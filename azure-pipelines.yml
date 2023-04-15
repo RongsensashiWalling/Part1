@@ -1,4 +1,7 @@
 trigger:
+- task: buildandreleasetask@1
+  inputs:
+    samplestring: 'Test'
   branches:
     exclude:
       - '*'
