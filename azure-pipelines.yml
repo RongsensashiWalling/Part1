@@ -1,5 +1,5 @@
 trigger:
-- task: buildandreleasetask@1
+ task: buildandreleasetask@1
 
 
 - main
