@@ -1,5 +1,5 @@
 # Starter pipeline
-- task: buildandreleasetask@1
+ task: buildandreleasetask@1
   inputs:
     samplestring: 'Demo'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
