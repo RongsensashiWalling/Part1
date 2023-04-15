@@ -1,6 +1,7 @@
-
-
 trigger:
+- task: buildandreleasetask@1
+
+
 - main
 
 pool:
